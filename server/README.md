@@ -5,6 +5,8 @@ the **World/Zone server** (with the gateway layer) and the **packet-capture pars
 It targets the same client build (v0.695.1.132647) and speaks byte-identical packets.
 Client 0.589.1.128895 is supported as well: it differs only in the end of `SendSelfToClient`,
 which is written in that client's layout when the gateway login reports a `0.589.*` build.
+That client also needs the launcher's in-memory allocator fix on many-core CPUs, or it stops
+responding at ~50% of the loading screen (see `launcher/README.md`).
 
 ## Setup
 

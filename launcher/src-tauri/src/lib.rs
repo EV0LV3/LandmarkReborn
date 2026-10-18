@@ -1,5 +1,6 @@
 mod auth;
 mod config;
+mod game_patch;
 
 use std::path::{Path, PathBuf};
 use std::process::Command;
@@ -145,11 +146,11 @@ async fn play(app: AppHandle, state: State<'_, LauncherState>) -> Result<(), Str
     };
 
     let working_dir = game.parent().ok_or("Invalid game location.")?;
-    Command::new(&game)
+    let mut command = Command::new(&game);
+    command
         .args([format!("SessionId={}", session.key), "CasSessionId=0".into(), "STEAM_ENABLED=0".into()])
-        .current_dir(working_dir)
-        .spawn()
-        .map_err(|e| format!("Could not start {}: {e}", game.display()))?;
+        .current_dir(working_dir);
+    game_patch::spawn_patched(&mut command).map_err(|e| format!("Could not start {}: {e}", game.display()))?;
     Ok(())
 }
 
