@@ -1,7 +1,7 @@
 # LandmarkReborn (Python + Tauri)
 
 A port of [LandmarkEmu](https://github.com/kirmmin/LandmarkEmu), the server emulator for the
-sunset MMORPG Landmark (client v0.695.1.132647):
+sunset MMORPG Landmark:
 
 | Folder | What | Replaces |
 | --- | --- | --- |
