@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Landmark RE:Build Launcher</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="main.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>Landmark <span>RE:Build</span></h1>
+
+      <form id="login-form" autocomplete="on">
+        <label>
+          Username
+          <input id="username" name="username" autocomplete="username" required />
+        </label>
+        <label>
+          Password
+          <input id="password" name="password" type="password" autocomplete="current-password" required />
+        </label>
+        <button id="login" type="submit">Login</button>
+      </form>
+
+      <section id="play-panel" hidden>
+        <p class="welcome">Logged in as <strong id="logged-in-as"></strong></p>
+        <button id="play" class="play" type="button">Play</button>
+        <div class="links">
+          <button id="change-game" class="link" type="button">Change game location</button>
+          <button id="logout" class="link" type="button">Log out</button>
+        </div>
+      </section>
+
+      <p id="status" role="status" aria-live="polite"></p>
+    </main>
+
+    <footer>
+      <span id="server" title="Set &quot;Server&quot; in LauncherConfig.json to change this"></span>
+      <span id="game-path"></span>
+    </footer>
+  </body>
+</html>

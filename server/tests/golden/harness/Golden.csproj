@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Emits tests/golden/golden.json from the ORIGINAL C# LandmarkEmu sources.
+    OriginalRoot must point at a checkout of https://github.com/kirmmin/LandmarkEmu.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <NoWarn>$(NoWarn);CS8321;MSB3277</NoWarn>
+    <OriginalRoot Condition="'$(OriginalRoot)' == ''">$(MSBuildThisFileDirectory)..\..\..\..\_original</OriginalRoot>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="$(OriginalRoot)\LandmarkEmulator.Shared\LandmarkEmulator.Shared.csproj" />
+    <ProjectReference Include="$(OriginalRoot)\LandmarkEmulator.AuthServer\LandmarkEmulator.AuthServer.csproj" />
+    <ProjectReference Include="$(OriginalRoot)\LandmarkEmulator.WorldServer\LandmarkEmulator.WorldServer.csproj" />
+    <ProjectReference Include="$(OriginalRoot)\LandmarkEmulator.Gateway\LandmarkEmulator.Gateway.csproj" />
+  </ItemGroup>
+
+</Project>

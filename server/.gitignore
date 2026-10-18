@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+*.log
+*.db
+AuthServer.json
+WorldServer.json
+gameData/
+PacketParse.txt
+packets/
+tests/golden/harness/bin/
+tests/golden/harness/obj/
+.ruff_cache/

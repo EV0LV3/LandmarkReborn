@@ -1,0 +1,32 @@
+{
+  "Network": {
+    "Host": "0.0.0.0",
+    "Port": 20042
+  },
+  "Database": {
+    "Auth": {
+      "ConnectionString": "server=127.0.0.1;port=3306;user=landmarkemu;password=landmarkemu;database=lmemu_auth",
+      "Provider": "MySql"
+    },
+    "Character": {
+      "ConnectionString": "server=127.0.0.1;port=3306;user=landmarkemu;password=landmarkemu;database=lmemu_character",
+      "Provider": "MySql"
+    }
+  },
+  "WebApi": {
+    "Enabled": true,
+    "BaseURI": "http://0.0.0.0:5080",
+    "__Https_Comment__": "For https, set BaseURI to https://... and point these at a PEM certificate and key.",
+    "CertificateFile": "",
+    "CertificateKeyFile": ""
+  },
+  "CreationRules": {
+    "__StrictName_Comment__": "This forces names to be RPG-style. First letter capitalized, no numbers, no spaces.",
+    "StrictName": false
+  },
+  "Logging": {
+    "ConsoleLevel": "Debug",
+    "FileLevel": "Trace"
+  },
+  "GameDataPath": "gameData"
+}
