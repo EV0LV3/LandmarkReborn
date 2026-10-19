@@ -1,5 +1,11 @@
 # LandmarkReborn (Python + Tauri)
 
+> [!IMPORTANT]
+> This work on the client version: v0.58 (Steam)
+
+> [!WARNING]
+> The world is loading, but there is still a lot of work to be done. The travel system is not working.
+
 A port of [LandmarkEmu](https://github.com/kirmmin/LandmarkEmu), the server emulator for the
 sunset MMORPG Landmark:
 
