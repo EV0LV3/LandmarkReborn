@@ -1,9 +1,6 @@
 # LandmarkReborn (Python + Tauri)
 
 > [!IMPORTANT]
-> This work on the client version: v0.58 (Steam)
-
-> [!WARNING]
 > The world is loading, but there is still a lot of work to be done. The travel system is not working, etc.
 
 A port of [LandmarkEmu](https://github.com/kirmmin/LandmarkEmu), the server emulator for the
@@ -34,9 +31,6 @@ npm run dev                         # log in, press Play, pick Landmark64.exe
 The servers are wire-compatible with the original: the test suite checks the Python output
 byte-for-byte against vectors generated from the original C# code, and runs a full
 login → character creation → zone login flow with a simulated client.
-
-`_original/` is the untouched C# checkout used for the comparison; it can be deleted if you
-don't intend to regenerate the golden vectors.
 
 Licensed under the GNU AGPL v3, like the original.
 
