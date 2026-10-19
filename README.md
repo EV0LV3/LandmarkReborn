@@ -41,3 +41,5 @@ don't intend to regenerate the golden vectors.
 Licensed under the GNU AGPL v3, like the original.
 
 ###### Landmark, EverQuest, Daybreak Games, and all associated logos and designs are trademarks or registered trademarks of Daybreak Games. All other trademarks are the property of their respective owners.
+
+###### AI is use to convert it to Python and Rust!
